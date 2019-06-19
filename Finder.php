@@ -16,6 +16,7 @@ use dektrium\user\models\Token;
 use yii\authclient\ClientInterface;
 use yii\base\BaseObject;
 use yii\db\ActiveQuery;
+use yii\db\ActiveQueryInterface;
 
 /**
  * Finder provides some useful methods for finding active record models.
@@ -75,7 +76,7 @@ class Finder extends BaseObject
     }
 
     /** @param ActiveQuery $userQuery */
-    public function setUserQuery(ActiveQuery $userQuery)
+    public function setUserQuery(ActiveQueryInterface $userQuery)
     {
         $this->userQuery = $userQuery;
     }
