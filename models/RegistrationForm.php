@@ -14,6 +14,7 @@ namespace dektrium\user\models;
 use dektrium\user\traits\ModuleTrait;
 use Yii;
 use yii\base\Model;
+use yii\web\IdentityInterface;
 
 /**
  * Registration form collects user input on registration process, validates it and creates new User model.
@@ -133,7 +134,7 @@ class RegistrationForm extends Model
      *
      * @param User $user
      */
-    protected function loadAttributes(User $user)
+    protected function loadAttributes(IdentityInterface $user)
     {
         $user->setAttributes($this->attributes);
     }
